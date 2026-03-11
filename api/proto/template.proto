@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package vladankor.go_template.api;
+
+import "types/types.proto";
+
+option go_package = "github.com/vladankor/go-template.git/pkg/proto;api";
+
+service UserService {
+  rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
+  rpc GetUser    (GetUserRequest)    returns (GetUserResponse);
+}
+
+message CreateUserRequest {
+  string name = 1;
+  string email = 2;
+}
+
+message GetUserRequest {
+  string id = 1;
+}
+
+message CreateUserResponse {
+  types.User user = 1;
+}
+
+message GetUserResponse {
+  types.User user = 1;
+}

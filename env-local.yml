@@ -1,0 +1,15 @@
+# Конфиг для локального запуска образа PostgreSQL
+POSTGRES:
+  USER: postgres
+  PASSWORD: postgres
+  DATABASE: postgres
+  PORT: 5432
+  VERSION: 16
+
+# Конфиг для локального запуска образа Kafka
+KAFKA:
+  CONFLUENT_SUPPORT_METRICS_ENABLE: "false"
+  LOG_SEGMENT_BYTES: 536870912  # 512MB
+  LOG_RETENTION_BYTES: 1073741824  # 1GB
+  LOG_RETENTION_HOURS: 168  # 7 дней
+  PARTITIONS: 6

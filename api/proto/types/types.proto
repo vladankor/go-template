@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package vladankor.go_template.types;
+
+option go_package = "github.com/vladankor/go-template.git/pkg/proto/types;types";
+
+message User {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+  string role = 4;
+}
